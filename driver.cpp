@@ -1,13 +1,24 @@
 #include <iostream>
 #include <string>
+#include <cassert>
 
 using namespace std;
 
+string helloName(string name);
+
 int main()
 {
-    cout << "Hello World!!" << endl;
-    cout << "This is a grrrrrreat day to code!! " << endl; 
+    assert(helloName("Bob") == "Hello Bob!");
+    assert(helloName("Alice") == "Hello Alice!");
+    assert(helloName("X") == "Hello X!");
+    assert(helloName("Joe") == "Hello Joe!");
+    assert(helloName("Cindy") == "Hello Cindy!");
     
 
     return 0;
+}
+
+string helloName(string name)
+{
+    return "Hello " + name + "!";
 }
